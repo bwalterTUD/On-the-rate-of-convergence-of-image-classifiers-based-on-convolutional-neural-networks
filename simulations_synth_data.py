@@ -45,12 +45,10 @@ filename = now.strftime('results_'+'%d.%m_%H.%M'+'_synth_data_task='+str(task)+'
 # Define parameter grids:
 
 # Grid for CNN
-#grid_2 = {'level': [2,3,4], 'channels': [2,4,8], 'layers': [1,2,3], 'paths': [1,2], 'rnet': [5,10]}
-grid_2 = {'level': [2], 'channels': [2], 'layers': [1], 'paths': [2], 'rnet': [5]}
+grid_2 = {'level': [2,3,4], 'channels': [2,4,8], 'layers': [1,2,3], 'paths': [1,2], 'rnet': [5,10]}
 
 # Grid for standard FNN
 grid_0={'neurons':[10,20,50,100,200],'layers':[1,2,3,4,5,6,7,8]}
-#grid_0={'neurons':[10,20,50,100,200],'layers':[1,2,3,4,5,6,7,8]}
 
 # Grid for nearest neighbor estimate
 kn=[1,2,3]+list(range(4,int(n_train*0.8),4))
