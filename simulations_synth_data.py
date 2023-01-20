@@ -149,8 +149,8 @@ def CNN_arch(lr=0.01, input_shape=(32, 32, 1), Par=(2, 1, 2, [3, 3], 2, 4)):
         Cpaths = []
         for i in range(paths):
             Cpaths.append(convpart(input, input_shape, Par[:5]))
-            # output = concatenate(Cpaths)
-        output = tf.keras.layers.Maximum()(Cpaths)
+        output = concatenate(Cpaths)
+        #output = tf.keras.layers.Maximum()(Cpaths)
     for i in range(layers):
         output = Dense(rnet, activation='relu', kernel_initializer=initializer, bias_initializer='zeros')(output)
     output = Dense(1, kernel_initializer=initializer, bias_initializer=initializer2)(output)
